@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+
+@mixin font-nunito-bold {
+    font-family: 'nunito', sans-serif;
+    font-size: 16pt;
+}
+
+@mixin border {
+    border: 2pt dotted gray;
+}
+
+@mixin flex-center-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin box-size {
+    width: 500px;
+    height: 100px;
+}
+
+body {
+    @include flex-center-xy();
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.drop-container {
+    @include border;
+    @include font-nunito-bold;
+    @include flex-center-xy();
+    @include box-size;
+
+
+    cursor: pointer;
+}
+
+.drop-preview {
+    @include border;
+    @include font-nunito-bold;
+    @include box-size;
+
+    overflow-y: scroll;
+
+    .preview-item {
+        color: gray;
+        margin: 8px;
+    }
+}

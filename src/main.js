@@ -64,7 +64,7 @@ class DropUpload {
     #renderPreview() {
         this.#node.querySelector(this.#previewId).innerHTML = ""
         Object.keys(this.#filesDc).forEach((k) => {
-            this.#node.querySelector(this.#previewId).innerHTML += k + "<br/>"
+            this.#node.querySelector(this.#previewId).innerHTML += `<div class="preview-item">${k}</div>`
         })
     }
 
