@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/css/main.css"
+    <link rel="stylesheet" href="./styles/css/main.css"/>
 </head>
 
 <body>
@@ -19,6 +19,12 @@
     </div>
 
     <script src="./src/main.js"></script>
+    <script>
+        window.onload = function () {
+            upload = new DropUpload(document, "#app", "application/epub+zip, image/*")
+            upload.addPreview(".drop-preview")
+        }
+    </script>
 </body>
 
 </html>

@@ -74,7 +74,3 @@ class DropUpload {
     }
 }
 
-window.onload = function () {
-    upload = new DropUpload(document, "#app", "application/epub+zip, image/*")
-    upload.addPreview(".drop-preview")
-}
